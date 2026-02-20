@@ -14,23 +14,23 @@ const Header: React.FC = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white/95 backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.05)] py-3' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <div className="w-14 h-14 bg-indigo-600 text-white rounded-2xl flex items-center justify-center shadow-lg transform rotate-3 hover:rotate-0 transition-transform cursor-pointer">
-             <i className="fa-solid fa-layer-group text-2xl"></i>
+        <div className="flex items-center gap-2 sm:gap-4">
+          <div className="w-10 h-10 sm:w-14 sm:h-14 bg-indigo-600 text-white rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg transform rotate-3 hover:rotate-0 transition-transform cursor-pointer">
+            <i className="fa-solid fa-layer-group text-xl sm:text-2xl"></i>
           </div>
           <div className="flex flex-col">
-            <span className={`text-3xl font-black tracking-tighter leading-none ${isScrolled ? 'text-slate-900' : 'text-white'}`}>
+            <span className={`text-xl sm:text-3xl font-black tracking-tighter leading-none ${isScrolled ? 'text-slate-900' : 'text-white'}`}>
               {COMPANY_NAME}
             </span>
-            <span className={`text-[9px] font-black uppercase tracking-[0.3em] mt-1 ${isScrolled ? 'text-indigo-600' : 'text-indigo-400'}`}>Мебельный завод СПб</span>
+            <span className={`hidden sm:block text-[9px] font-black uppercase tracking-[0.3em] mt-1 ${isScrolled ? 'text-indigo-600' : 'text-indigo-400'}`}>Мебельный завод СПб</span>
           </div>
         </div>
 
         <nav className="hidden xl:flex items-center gap-12 text-[10px] font-black uppercase tracking-[0.2em]">
           {['Каталог', 'Преимущества', 'Процесс', 'Контакты'].map((item) => (
-            <a 
-              key={item} 
-              href={`#${item.toLowerCase()}`} 
+            <a
+              key={item}
+              href={`#${item.toLowerCase()}`}
               className={`hover:text-indigo-500 transition-all relative group ${isScrolled ? 'text-slate-600' : 'text-slate-100'}`}
             >
               {item}

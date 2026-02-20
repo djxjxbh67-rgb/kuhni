@@ -4,9 +4,9 @@ import { BENEFITS } from '../constants';
 
 const Benefits: React.FC = () => {
   return (
-    <section id="преимущества" className="py-24 bg-slate-50">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+    <section id="преимущества" className="py-12 sm:py-24 bg-slate-50">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {BENEFITS.map((benefit, idx) => (
             <div key={idx} className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-all hover:-translate-y-2 group">
               <div className="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 transition-colors">

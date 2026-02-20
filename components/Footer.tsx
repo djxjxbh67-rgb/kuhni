@@ -5,9 +5,9 @@ import { COMPANY_NAME, PHONE_NUMBER } from '../constants';
 const Footer: React.FC = () => {
   return (
     <footer id="контакты" className="bg-slate-900 py-20 text-white">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12 mb-16">
-          <div className="space-y-6">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12 sm:mb-16">
+          <div className="space-y-4 sm:space-y-6">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-yellow-400 text-slate-900 rounded-xl flex items-center justify-center font-black italic">
                 КЗ
@@ -61,13 +61,13 @@ const Footer: React.FC = () => {
               <div className="flex items-center gap-4">
                 <i className="fa-solid fa-location-dot text-yellow-400 text-xl"></i>
                 <div className="text-xs font-bold text-slate-300">
-                  Москва, МКАД 41-й км, <br/>Строительный рынок «Мельница»
+                  Москва, МКАД 41-й км, <br />Строительный рынок «Мельница»
                 </div>
               </div>
             </div>
           </div>
         </div>
-        
+
         <div className="pt-12 border-t border-white/5 text-center text-slate-500 text-[10px] font-bold uppercase tracking-widest">
           © {new Date().getFullYear()} {COMPANY_NAME}. Информация на сайте не является публичной офертой.
         </div>

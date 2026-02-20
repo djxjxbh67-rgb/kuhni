@@ -5,9 +5,9 @@ const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=2070" 
-          alt="Кухни Контракт СПб" 
+        <img
+          src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=2070"
+          alt="Кухни Контракт СПб"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/60 to-transparent"></div>
@@ -15,20 +15,20 @@ const Hero: React.FC = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl space-y-10 animate-fade-in">
-          <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-indigo-600 text-white rounded-full font-bold text-xs uppercase tracking-[0.2em] shadow-2xl border border-indigo-400/30">
+          <div className="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-5 py-2 sm:py-2.5 bg-indigo-600 text-white rounded-full font-bold text-[9px] sm:text-xs uppercase tracking-[0.1em] sm:tracking-[0.2em] shadow-2xl border border-indigo-400/30">
             <span className="w-2 h-2 bg-yellow-400 rounded-full animate-ping"></span>
-            Мебельная фабрика полного цикла в СПб
+            Мебельная фабрика в СПб
           </div>
-          
-          <h1 className="text-5xl md:text-8xl font-black text-white leading-[0.9] tracking-tighter">
-            КУХНИ С ДУШОЙ <br/>
+
+          <h1 className="text-4xl sm:text-5xl md:text-8xl font-black text-white leading-[0.9] tracking-tighter mt-4 sm:mt-0">
+            КУХНИ С ДУШОЙ <br />
             <span className="text-indigo-500">ОТ ЗАВОДА</span>
           </h1>
-          
-          <p className="text-xl md:text-3xl text-slate-200 max-w-2xl font-light leading-relaxed">
+
+          <p className="text-base sm:text-xl md:text-3xl text-slate-200 max-w-2xl font-light leading-relaxed mt-4 sm:mt-0">
             Создаем индивидуальные решения в Санкт-Петербурге с 2010 года. <span className="font-bold text-white">Цены на 35% ниже</span> розничных за счет отсутствия посредников.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-6">
             <a href="#quiz" className="group px-12 py-6 bg-indigo-600 hover:bg-indigo-700 text-white font-black rounded-2xl text-xl shadow-[0_20px_50px_rgba(79,70,229,0.4)] transition-all transform hover:scale-105 text-center uppercase tracking-tight flex items-center justify-center gap-3">
               Рассчитать стоимость
@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
               <div className="text-white/60 text-xs uppercase tracking-widest font-bold">Мойка или сертификат 10.000₽</div>
             </div>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-white/10">
             {[
               { label: 'Гарантия', val: '10 ЛЕТ' },

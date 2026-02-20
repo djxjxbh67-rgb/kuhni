@@ -13,53 +13,53 @@ const Quiz: React.FC = () => {
         <div className="max-w-6xl mx-auto bg-white rounded-[48px] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.08)] flex flex-col md:flex-row min-h-[650px] border border-slate-100">
           {/* Левая панель - Статус и бонусы */}
           <div className="md:w-1/3 bg-indigo-600 p-12 text-white flex flex-col justify-between relative overflow-hidden">
-             <div className="absolute -top-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-[80px]"></div>
-             
-             <div className="relative z-10">
-                <h3 className="text-3xl font-black mb-6 uppercase leading-tight tracking-tighter">Онлайн-расчёт <br/><span className="text-yellow-400">стоимости</span></h3>
-                <p className="text-indigo-100 text-sm mb-10 font-medium leading-relaxed">Ответьте на 4 вопроса, и мы пришлем вам 3 варианта сметы (эконом, стандарт, премиум) под ваш бюджет.</p>
-                
-                <div className="space-y-6">
-                  <div className="flex items-center gap-5 bg-white/10 p-5 rounded-3xl border border-white/20 backdrop-blur-md">
-                    <div className="w-14 h-14 bg-yellow-400 text-indigo-900 rounded-2xl flex items-center justify-center text-2xl shadow-lg transform -rotate-3">
-                      <i className="fa-solid fa-wallet"></i>
-                    </div>
-                    <div>
-                      <div className="font-bold text-sm">Ваша выгода:</div>
-                      <div className="text-xs text-yellow-400 font-black uppercase tracking-widest">Сертификат 10 000 ₽</div>
-                    </div>
+            <div className="absolute -top-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-[80px]"></div>
+
+            <div className="relative z-10">
+              <h3 className="text-3xl font-black mb-6 uppercase leading-tight tracking-tighter">Онлайн-расчёт <br /><span className="text-yellow-400">стоимости</span></h3>
+              <p className="text-indigo-100 text-sm mb-10 font-medium leading-relaxed">Ответьте на 4 вопроса, и мы пришлем вам 3 варианта сметы (эконом, стандарт, премиум) под ваш бюджет.</p>
+
+              <div className="space-y-6">
+                <div className="flex items-center gap-5 bg-white/10 p-5 rounded-3xl border border-white/20 backdrop-blur-md">
+                  <div className="w-14 h-14 bg-yellow-400 text-indigo-900 rounded-2xl flex items-center justify-center text-2xl shadow-lg transform -rotate-3">
+                    <i className="fa-solid fa-wallet"></i>
+                  </div>
+                  <div>
+                    <div className="font-bold text-sm">Ваша выгода:</div>
+                    <div className="text-xs text-yellow-400 font-black uppercase tracking-widest">Сертификат 10 000 ₽</div>
                   </div>
                 </div>
-             </div>
+              </div>
+            </div>
 
-             <div className="mt-12">
-               <div className="flex justify-between text-[10px] font-black uppercase tracking-[0.2em] text-indigo-200 mb-3">
-                 <span>Завершено: {Math.round((step/totalSteps)*100)}%</span>
-                 <span>Шаг {step} из {totalSteps}</span>
-               </div>
-               <div className="w-full h-2 bg-indigo-900/30 rounded-full overflow-hidden">
-                 <div className="h-full bg-yellow-400 transition-all duration-1000 shadow-[0_0_20px_rgba(250,204,21,0.6)]" style={{width: `${(step/totalSteps)*100}%`}}></div>
-               </div>
-             </div>
+            <div className="mt-12">
+              <div className="flex justify-between text-[10px] font-black uppercase tracking-[0.2em] text-indigo-200 mb-3">
+                <span>Завершено: {Math.round((step / totalSteps) * 100)}%</span>
+                <span>Шаг {step} из {totalSteps}</span>
+              </div>
+              <div className="w-full h-2 bg-indigo-900/30 rounded-full overflow-hidden">
+                <div className="h-full bg-yellow-400 transition-all duration-1000 shadow-[0_0_20px_rgba(250,204,21,0.6)]" style={{ width: `${(step / totalSteps) * 100}%` }}></div>
+              </div>
+            </div>
           </div>
 
           {/* Правая панель - Вопросы */}
-          <div className="md:w-2/3 p-12 md:p-20 relative bg-white">
+          <div className="md:w-2/3 p-6 sm:p-12 md:p-20 relative bg-white">
             {step === 1 && (
-              <div className="animate-fade-in space-y-10">
-                <h4 className="text-3xl font-black text-slate-900 tracking-tight italic">01. Выберите конфигурацию:</h4>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+              <div className="animate-fade-in space-y-6 sm:space-y-10">
+                <h4 className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 tracking-tight italic">01. Выберите конфигурацию:</h4>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
                   {[
-                    {name: 'Прямая', icon: 'fa-square'},
-                    {name: 'Угловая (Г)', icon: 'fa-chart-area'},
-                    {name: 'П-образная', icon: 'fa-table-cells-large'},
-                    {name: 'С островом', icon: 'fa-border-all'},
-                    {name: 'Двухрядная', icon: 'fa-grip-lines'},
-                    {name: 'В нишу', icon: 'fa-maximize'}
+                    { name: 'Прямая', icon: 'fa-square' },
+                    { name: 'Угловая (Г)', icon: 'fa-chart-area' },
+                    { name: 'П-образная', icon: 'fa-table-cells-large' },
+                    { name: 'С островом', icon: 'fa-border-all' },
+                    { name: 'Двухрядная', icon: 'fa-grip-lines' },
+                    { name: 'В нишу', icon: 'fa-maximize' }
                   ].map((item, idx) => (
-                    <button key={idx} onClick={nextStep} className="p-8 border-2 border-slate-50 rounded-[32px] hover:border-indigo-600 hover:bg-indigo-50/50 transition-all group flex flex-col items-center gap-4 active:scale-95 shadow-sm hover:shadow-xl">
-                      <i className={`fa-solid ${item.icon} text-4xl text-slate-200 group-hover:text-indigo-600 transition-colors`}></i>
-                      <span className="font-bold text-[11px] uppercase tracking-widest text-slate-500 group-hover:text-slate-900">{item.name}</span>
+                    <button key={idx} onClick={nextStep} className="p-4 sm:p-8 border-2 border-slate-50 rounded-2xl sm:rounded-[32px] hover:border-indigo-600 hover:bg-indigo-50/50 transition-all group flex flex-col items-center gap-2 sm:gap-4 active:scale-95 shadow-sm hover:shadow-xl">
+                      <i className={`fa-solid ${item.icon} text-2xl sm:text-4xl text-slate-200 group-hover:text-indigo-600 transition-colors`}></i>
+                      <span className="font-bold text-[9px] sm:text-[11px] uppercase tracking-wider sm:tracking-widest text-slate-500 group-hover:text-slate-900 text-center">{item.name}</span>
                     </button>
                   ))}
                 </div>
@@ -67,19 +67,19 @@ const Quiz: React.FC = () => {
             )}
 
             {step === 2 && (
-              <div className="animate-fade-in space-y-10">
-                <h4 className="text-3xl font-black text-slate-900 tracking-tight italic">02. Какой материал фасада?</h4>
-                <div className="grid grid-cols-2 gap-6">
+              <div className="animate-fade-in space-y-6 sm:space-y-10">
+                <h4 className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 tracking-tight italic">02. Какой материал фасада?</h4>
+                <div className="grid grid-cols-2 gap-3 sm:gap-6">
                   {[
-                    {name: 'Пластик (HPL/FENIX)', img: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=400'},
-                    {name: 'Эмаль (Краска)', img: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400'},
-                    {name: 'Пленка ПВХ (Soft-touch)', img: 'https://images.unsplash.com/photo-1516880711640-ef7db81be3e1?w=400'},
-                    {name: 'Массив дерева', img: 'https://images.unsplash.com/photo-1556185731-242503d891c6?w=400'}
+                    { name: 'Пластик (HPL/FENIX)', img: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=400' },
+                    { name: 'Эмаль (Краска)', img: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400' },
+                    { name: 'Пленка ПВХ (Soft-touch)', img: 'https://images.unsplash.com/photo-1516880711640-ef7db81be3e1?w=400' },
+                    { name: 'Массив дерева', img: 'https://images.unsplash.com/photo-1556185731-242503d891c6?w=400' }
                   ].map((item, idx) => (
-                    <button key={idx} onClick={nextStep} className="relative h-40 rounded-[32px] overflow-hidden group border-4 border-transparent hover:border-indigo-600 active:scale-95 transition-all shadow-md">
+                    <button key={idx} onClick={nextStep} className="relative h-28 sm:h-40 rounded-2xl sm:rounded-[32px] overflow-hidden group border-4 border-transparent hover:border-indigo-600 active:scale-95 transition-all shadow-md">
                       <img src={item.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent flex items-end justify-center p-6">
-                        <span className="text-white font-black text-xs text-center uppercase leading-tight tracking-[0.1em]">{item.name}</span>
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent flex items-end justify-center p-3 sm:p-6">
+                        <span className="text-white font-black text-[9px] sm:text-xs text-center uppercase leading-tight tracking-[0.05em] sm:tracking-[0.1em]">{item.name}</span>
                       </div>
                     </button>
                   ))}
@@ -88,8 +88,8 @@ const Quiz: React.FC = () => {
             )}
 
             {step === 3 && (
-              <div className="animate-fade-in space-y-10">
-                <h4 className="text-3xl font-black text-slate-900 tracking-tight italic">03. Когда планируете монтаж?</h4>
+              <div className="animate-fade-in space-y-6 sm:space-y-10">
+                <h4 className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 tracking-tight italic">03. Когда планируете монтаж?</h4>
                 <div className="grid gap-4">
                   {[
                     'Как можно быстрее (нужна кухня сейчас)',
@@ -127,10 +127,10 @@ const Quiz: React.FC = () => {
                 </div>
               </div>
             )}
-            
+
             {step < totalSteps && (
               <div className="mt-16 flex justify-start">
-                <button 
+                <button
                   onClick={() => step > 1 && setStep(step - 1)}
                   className={`text-slate-300 hover:text-slate-900 font-black text-[10px] uppercase tracking-[0.3em] flex items-center gap-3 transition-colors ${step === 1 ? 'invisible' : ''}`}
                 >
