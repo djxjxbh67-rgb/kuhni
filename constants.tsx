@@ -23,7 +23,7 @@ export const STYLES: KitchenStyle[] = [
     id: 'high-tech',
     name: 'Коллекция «TECHNO»',
     description: 'Ультрасовременные кухни с интегрированными ручками и фасадами из акрилового пластика.',
-    image: 'https://images.unsplash.com/photo-1556185731-242503d891c6?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=800',
     priceFrom: 'от 29 400 ₽/м.п.'
   },
   {

@@ -74,7 +74,7 @@ const Quiz: React.FC = () => {
                     { name: 'Пластик (HPL/FENIX)', img: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=400' },
                     { name: 'Эмаль (Краска)', img: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400' },
                     { name: 'Пленка ПВХ (Soft-touch)', img: 'https://images.unsplash.com/photo-1516880711640-ef7db81be3e1?w=400' },
-                    { name: 'Массив дерева', img: 'https://images.unsplash.com/photo-1556185731-242503d891c6?w=400' }
+                    { name: 'Массив дерева', img: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400' }
                   ].map((item, idx) => (
                     <button key={idx} onClick={nextStep} className="relative h-28 sm:h-40 rounded-2xl sm:rounded-[32px] overflow-hidden group border-4 border-transparent hover:border-indigo-600 active:scale-95 transition-all shadow-md">
                       <img src={item.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
